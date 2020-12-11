@@ -20,8 +20,10 @@ Why Bit Serial in 2020?
 
 Bit serial designs directly trade off their hardware complexity against their processing speed. If you want a simple soft-core processor on an FPGA, and and have few performance constraints, then a bit serial design might be an ideal use of the remaining hardware resources. With a bit serial design requiring minimal hardware, there exists the opportunity to have multiple bit serial cpu cores on a single FPGA.  
 
-Nowadays we have well established standard parallel memory interfaces. We can access these with a parallel bus, with an address register, a read register and a write register. It is relatively straightforware to add these to a bit serial cpu.
+Nowadays we have well established standard parallel memory interfaces. We can access these with a parallel bus, with an address register, a read register and a write register. It is relatively straightforward to add these to a bit serial cpu.
 
-The file "minimal calculator"  is a bit serial ALU with a manual push-switch input and a basic hex output display. The purpose of this design is to exercise and prove the functionality of the bit serial ALU.
+The bit serial approach is to reduce the hardware in the ALU and datapaths. This becomes particularly advantageous in 16 and 32 bit processors. However modern memory already used well established parallel buses and there is no expense to these other than the tracks that they require on the pcb. 
+
+The file "min_calc_1"  is a bit serial ALU with a manual push-switch input and a basic hex output display. The purpose of this design is to exercise and prove the functionality of the bit serial ALU. The inputs and outputs already exist as parallel registers, so they will interface easily to the parallel memory bus.
 
 The next step is to add a parallel memory interface, and convert the bit serial ALU into a fully functioning stored program cpu.
