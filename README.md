@@ -1,9 +1,23 @@
 # Bit_Serial
 
-Simulations and designs for bit serial TTL circuitry and cpu architectures - using H. Neeman's "Digital"
+Simulations and designs for bit serial TTL circuitry and cpu architectures - using H. Neeman's "Digital" simulator.
 
 https://github.com/hneemann/Digital
 
+The file "min_calc_1"  is a bit serial ALU with a manual push-switch input and a 7-segment hex output display. 
+
+The purpose of this design is to exercise and prove the functionality of the bit serial ALU. 
+
+The inputs and outputs already exist as parallel registers, so they will interface easily to a parallel memory bus.
+
+"min_calculator_7" extends the ALU, improves the instruction decoding and adds a simple state machine "SPI Sequencer".  
+
+It also includes a 74xx299 universal shift register which is compatible with interfacing to a parallel bus. This is one first step on the journey to a complete bit serial cpu with SPI compatibility.
+
+The next step is to add a parallel memory interface, and convert the bit serial ALU into a fully functioning stored program cpu.
+
+
+# TLDR
 
 Bit serial refers to a technique used in the design of CPU and DSP architectures - such that data is processed in a serial fashion - usually 1 bit at a time (though 2-bit and 4-bit methods are also used sometimes).
 
@@ -29,8 +43,4 @@ Nowadays we have well established standard parallel memory interfaces. We can ac
 
 The bit serial approach is to reduce the hardware in the ALU and datapaths. This becomes particularly advantageous in 16 and 32 bit processors. However modern memory already used well established parallel buses and there is no expense to these other than the tracks that they require on the pcb. 
 
-The file "min_calc_1"  is a bit serial ALU with a manual push-switch input and a basic hex output display. The purpose of this design is to exercise and prove the functionality of the bit serial ALU. The inputs and outputs already exist as parallel registers, so they will interface easily to the parallel memory bus.
 
-"min_calculator_7" extends the ALU, improves the instruction decoding and adds a simple state machine "SPI Sequencer".  It also includes a 74xx299 universal shift register which is compatible with interfacing to a parallel bus. This is one stepon the journey to a complete bit serial cpu with SPI compatibility.
-
-The next step is to add a parallel memory interface, and convert the bit serial ALU into a fully functioning stored program cpu.
