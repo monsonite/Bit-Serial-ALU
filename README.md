@@ -10,7 +10,7 @@ The purpose of this design is to exercise and prove the functionality of the bit
 
 The inputs and outputs already exist as parallel registers, so they will interface easily to a parallel memory bus.
 
-"min_calculator_7" extends the ALU, improves the instruction decoding and adds a simple state machine "SPI Sequencer".  
+"8_bit_serial_ALU" extends the ALU, improves the instruction decoding and adds a simple state machine "SPI Sequencer".  
 
 It also includes a 74xx299 universal shift register which is compatible with interfacing to a parallel bus. This is one first step on the journey to a complete bit serial cpu with SPI compatibility.
 
