@@ -1,6 +1,6 @@
-# Bit_Serial
+# Bit Serial
 
-Simulations and designs for bit serial TTL circuitry and cpu architectures - using H. Neeman's "Digital" simulator.
+Simulations and designs for bit serial ALU TTL circuitry and cpu architectures - using H. Neeman's "Digital" simulator.
 
 https://github.com/hneemann/Digital
 
